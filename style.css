@@ -1,0 +1,47 @@
+
+/*---------------------------------*/
+/*--------- main code index-------*/
+.wrapper
+{
+    height: 722px;
+    width: 100%;
+    /*background-color: red;*/
+}
+.box
+{
+    height: 300px;
+    width: 450px;
+    background-color: black;
+    margin: 60px auto;      /*Aligning in centre*/
+    opacity: .6;
+    color: white;
+}
+
+/*--------------------login page-----------*/
+.box1
+{
+    height: 370px;
+    width: 450px;
+    background-color: black;
+    margin: 60px auto;      /*Aligning in centre*/
+    opacity: .6;
+    color: white;
+}
+
+
+/*------ reg/sign up page-------*/
+
+.box2
+{
+    height: 550px;
+    width: 450px;
+    background-color: black;
+    margin: 0px auto;      /*Aligning in centre*/
+    opacity: .6;
+    color: white;
+}
+
+
+
+
+
