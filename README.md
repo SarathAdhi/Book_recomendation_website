@@ -15,5 +15,18 @@ HOW TO USE THIS ZIP FILE... ?
 7. create 4 tables-> admin, user, books, verify
 <img width="737" alt="g1" src="https://user-images.githubusercontent.com/91727830/142236441-2ad408c1-d8c8-458c-a837-c553e5a04991.png">
 
+8. structure for each tables
+Admin
+<img width="590" alt="g1" src="https://user-images.githubusercontent.com/91727830/142236796-c089b1c8-85d8-4e2f-bd22-8974bff2070e.png">
+
+Books
+<img width="584" alt="g1" src="https://user-images.githubusercontent.com/91727830/142237002-8e5aae44-0e7f-41d0-a58f-6a0942c090b5.png">
+
+User
+<img width="589" alt="g1" src="https://user-images.githubusercontent.com/91727830/142237134-f4eb9ccb-9f90-47c3-b9d4-562d06df2580.png">
+
+verify
+<img width="582" alt="g1" src="https://user-images.githubusercontent.com/91727830/142237276-ee88676f-9943-47e5-88fa-1b86cfd5e7b7.png">
+
 . open any browser and search for "http://localhost/"
 . now select Book_recomendation_website
