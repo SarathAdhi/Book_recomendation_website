@@ -226,13 +226,13 @@
           <input type="text" name="lang" class="form-control" placeholder="Language" required=""><br>
           </center>
 
-          <p style="font-size: 20px; color: white; margin-left: -220px;">Book image:</p>
+          <!--<p style="font-size: 20px; color: white; margin-left: -220px;">Book image:</p>
           <input style="margin-left: 30px; color: white;" id="image" type="file" name="image" value="" required><br>
 
           <p style="font-size: 20px; color: white; margin-left: -220px;">Book PDF File:</p>
           <input style="margin-left: 30px; color: white;" id="pdf" type="file" name="pdf" value="" required><br>
           
-          <p style="font-size: 12px;color: black;background-color: lightgreen; ">*NOTE: Image and PDF file name should be same as book name.</p>
+          <p style="font-size: 12px;color: black;background-color: lightgreen; ">*NOTE: Image and PDF file name should be same as book name.</p>-->
 
           <button style="text-align: center; color: black; width: 80px; height: 40px;" class="btn btn-success" type="submit" name="submit">ADD</button>
           
@@ -263,16 +263,16 @@
         }
         if($count==0)
         {
-          $pdf=$_FILES['pdf']['name'];
+          /*$pdf=$_FILES['pdf']['name'];
           $pdf_type=$_FILES['pdf']['type'];
           $pdf_size=$_FILES['pdf']['size'];
           $pdf_tem_loc=$_FILES['pdf']['tmp_name'];
           $pdf_store="books/pdf_file/".$pdf;
-          /*move_uploaded_file($pdf_tem_loc,$pdf_store);*/
+          move_uploaded_file($pdf_tem_loc,$pdf_store);
 
           $image = $_FILES['image']['name'];
           $target = "books/image/".basename($image);
-          /*move_uploaded_file($_FILES['image']['tmp_name'], $target);*/
+          move_uploaded_file($_FILES['image']['tmp_name'], $target);*/
 
           mysqli_query($db,"INSERT INTO `books` (bid, author, bname, nop, genre, diff, lang, image, pdf) VALUES ('$_POST[bid]', '$_POST[author]', '$_POST[bname]', '$_POST[nop]', '$_POST[genre]', '$_POST[diff]', '$_POST[lang]', 'books/image/Batman and Spiderman.jpg', 'books/pdf_file/Batman and Spiderman.pdf') ;");
 
