@@ -106,36 +106,29 @@
       <?php
         $sql = "SELECT DISTINCT `genre` FROM `books` ORDER BY `books`.`genre` ASC";
         $res=mysqli_query($db,$sql);
-        $row=mysqli_fetch_assoc($res);
+        
+
         while($row=mysqli_fetch_assoc($res))
         {
-            echo "<p style='font-size: 30px; font-weight: bold;'>",$row['genre'],"</p>";
-        }
+          echo "<p style='font-size: 30px; font-weight: bold;'>",$row['genre'],"</p>";
 
-        $sql1 = "SELECT * FROM `books` WHERE `genre` = "$row['genre']"";
-        $res1=mysqli_query($db,$sql1);
-        for ($x = 0; $x < 2; $x++) 
-        {
-            
+          $sql2="SELECT `image`, `pdf` FROM `books` WHERE  `genre` = '$row[genre]'";
+          $res2=mysqli_query($db,$sql2);
+
+        while($row2=mysqli_fetch_assoc($res2))
+            {
       ?>
         <div class="card">
-          <?php
-            while($row1=mysqli_fetch_assoc($res1))
-            {
-              ?>
-              <img src="<?php echo $row['image']; ?> " height="50" width="50">
-              <?php
-            }
-            
-          ?>
+              <img src="<?php echo $row2['image']; ?> " alt="" class="card_img">
             <div class="card_data">
               <br><br>
               <p class="card_preci">Free</p><br>
-              <a href="books/pdf_file/.pdf" class="card_button" target="_blank" rel="noopener noreferrer">Download</a>
+              <a href="<?php echo $row2['pdf']; ?>" class="card_button" target="_blank" rel="noopener noreferrer">Download</a>
             </div>
         </div>
         &emsp; &emsp; 
       <?php
+        }
         }
       ?>
     </center>
