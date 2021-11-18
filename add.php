@@ -279,7 +279,7 @@
         ?>
           <script type="text/javascript">
            alert("Book Added Successfully. Upload to Github books folder");
-           location.replace("add.php");
+           location.replace("https://github.com/SarathAdhi/Book_recomendation_website/tree/main/books");
           </script>
 
         <?php
