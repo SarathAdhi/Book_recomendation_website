@@ -244,7 +244,7 @@
                     
                     <a href="logout.php">Logout</a>
                     <p>-------------</p>
-                    <a href="#team">My Profile</a>
+                    <a href="profile.php">My Profile</a>
                     <p>-------------</p>
                     <a href="#careers">Wishlist</a>
                     <p>-------------</p>
