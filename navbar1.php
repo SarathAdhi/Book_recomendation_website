@@ -73,7 +73,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            z-index:1;
+            
         }
 
         .header .header-1 .logo{
@@ -159,6 +159,7 @@
         .header .header-2 .navbar{
             text-align: center;
             position: fixed;
+            z-index:1;
         }
 
         .header .header-2 .navbar a{
