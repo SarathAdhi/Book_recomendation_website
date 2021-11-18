@@ -153,8 +153,7 @@
 
         .header .header-2{
             background:var(--green);
-            position: fixed;
-            z-index:1;
+            
 
         }
 
