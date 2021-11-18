@@ -1,6 +1,4 @@
-<?php
-    include "navbar1.php";
-?>
+
 
 <!DOCTYPE html>
 <html>
