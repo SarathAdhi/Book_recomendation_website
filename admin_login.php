@@ -168,7 +168,7 @@
 			}
 			else
 			{
-                $_SESSION['login_user'] = $_POST['username'];
+                $_SESSION['username'] = $_POST['username'];
 				?>
 					<script type="text/javascript">
                         alert("Login Successful.");
