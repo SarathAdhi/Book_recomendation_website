@@ -153,13 +153,14 @@
 
         .header .header-2{
             background:var(--green);
+            position: fixed;
+            z-index:1;
 
         }
 
         .header .header-2 .navbar{
             text-align: center;
-            position: fixed;
-            z-index:1;
+            
         }
 
         .header .header-2 .navbar a{
