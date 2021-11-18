@@ -274,7 +274,7 @@
           $target = "books/image/".basename($image);
           /*move_uploaded_file($_FILES['image']['tmp_name'], $target);*/
 
-          mysqli_query($db,"INSERT INTO `books` (bid, author, bname, nop, genre, diff, lang, image, pdf) VALUES ('$_POST[bid]', '$_POST[author]', '$_POST[bname]', '$_POST[nop]', '$_POST[genre]', '$_POST[diff]', '$_POST[lang]', '$target', '$pdf_store') ;");
+          mysqli_query($db,"INSERT INTO `books` (bid, author, bname, nop, genre, diff, lang, image, pdf) VALUES ('$_POST[bid]', '$_POST[author]', '$_POST[bname]', '$_POST[nop]', '$_POST[genre]', '$_POST[diff]', '$_POST[lang]', 'books/image/Batman and Spiderman.jpg', 'books/pdf_file/Batman and Spiderman.pdf') ;");
 
         ?>
           <script type="text/javascript">
