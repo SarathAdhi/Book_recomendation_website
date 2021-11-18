@@ -261,7 +261,7 @@
             <a href="index.php">Home</a>
             <a href="genre.php">Genre</a>
             <a href="books.php">Arrivals</a>
-            <a href="about_us/index.php">About Us</a>
+            <a href="aboutus.php">About Us</a>
         </nav>
     </div>
     </header>
@@ -293,7 +293,7 @@
                     <a href="index.php">Home</a>
                     <a href="genre.php">Genre</a>
                     <a href="arrivals.php">Arrivals</a>
-                    <a href="about_us/index.php">About Us</a>
+                    <a href="aboutus.php">About Us</a>
                 </nav>
             </div>
         </header>
