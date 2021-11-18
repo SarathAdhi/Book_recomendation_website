@@ -263,7 +263,7 @@ p {
     </div>
   </div>
 
-  <div class="card" style="background-image: url('https://d21950x0o1sh55.cloudfront.net/uploads/inside_exclusif/picture/50/desktop_guided_tour_2.jpg');">
+  <div class="card" style="background-image: url(about_us/har.jpg);">
     <div class="card__content" >
       <div class="card__content--description" >
         <h3 class="roll-up" style="margin-left:-4px;">
