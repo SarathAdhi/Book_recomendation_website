@@ -66,10 +66,7 @@
         .btn1:hover{
             background:var(--dark-color);
         }
-        .header
-        {
-            position: fixed;
-        }
+
         .header .header-1{
             background:#fff;
             padding:1.5rem 9%;
@@ -161,7 +158,7 @@
 
         .header .header-2 .navbar{
             text-align: center;
-
+            position: fixed;
         }
 
         .header .header-2 .navbar a{
