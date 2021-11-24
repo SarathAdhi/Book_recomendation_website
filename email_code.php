@@ -137,7 +137,7 @@
       if(isset($_POST['submit1']))
       {
         $count=0;
-        $sql="SELECT email from `USERS`";
+        $sql="SELECT email from `users`";
         $res=mysqli_query($db,$sql);
 
         while($row=mysqli_fetch_assoc($res)) /*checking if the username already exist */

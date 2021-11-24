@@ -162,7 +162,7 @@
             else
                 {
                     
-                    mysqli_query($db,"UPDATE USERS SET password='$_POST[password]' WHERE email ='$_POST[email]' ;");
+                    mysqli_query($db,"UPDATE users SET password='$_POST[password]' WHERE email ='$_POST[email]' ;");
                         ?>
                            <script type="text/javascript">
                             alert("The Password Updated Successfully.");
