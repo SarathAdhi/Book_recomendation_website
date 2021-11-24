@@ -109,7 +109,7 @@
             <div class="details">
 
                             <h1 style="text-align: center; color: white;">WELCOME</h1>
-                            <h2>Best Book Recommendation Website</h1>
+                            <h2>Use Desktop Browser for Better Experience</h1>
                             <h2>FinD yOUr PerFect B00k</h1>
             </div>
         </div>
