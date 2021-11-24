@@ -30,7 +30,7 @@
     {
 			if(isset($_GET['id']))
 			{
-					$sql = "SELECT * FROM `fav` WHERE bid = {$_GET['id']};";
+					$sql = "SELECT * FROM `fav` WHERE bid = {$_GET['id']} AND name = '$_SESSION[username]';";
 					$res=mysqli_query($db,$sql);
 					$count = mysqli_num_rows($res);
 					if($count == 0)
