@@ -1,6 +1,6 @@
 <?php
 
-	$db = mysqli_connect("remotemysql.com","rILqN3VfQi","uFB7I2wk5r","genre"); 	/* server name, username, password, database name */
+	$db = mysqli_connect("remotemysql.com","rILqN3VfQi","uFB7I2wk5r","rILqN3VfQi"); 	/* server name, username, password, database name */
 ?>
 
 <?php
