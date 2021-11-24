@@ -144,8 +144,8 @@
         }
         .container
         {
-          margin-top: 10px;
-          height: 720px;
+          margin-top: 5px;
+          height: 700px;
           width: 450px;
           background-color: rgba(0, 0, 0, 0.5);
           opacity: 1;
@@ -188,51 +188,52 @@
 
           <p style="font-size: 20px; color: white; margin-left: -50px;">Select genre:&nbsp; 
           <select name="genre" size="1" style="color: black; font-size: 15px">
-            <option value="arts">Arts</option>
-            <option value="biographies">Biographies</option>
-            <option value="business">Business</option>
-            <option value="comics">Comics</option>
-            <option value="computers & tech">Computers & Tech</option>
-            <option value="cooking">Cooking</option>
-            <option value="entertainment">Entertainment</option>
-            <option value="fantasy">Fantasy</option>
-            <option value="fiction">Fiction</option>
-            <option value="history">History</option>
-            <option value="horror">Horror</option>
-            <option value="kids">Kids</option>
-            <option value="music">Music</option>
-            <option value="mysteries">Mysteries</option>
-            <option value="non fiction">Non Fiction</option>
-            <option value="parenting">Parenting</option>
-            <option value="poetry">Poetry</option>
-            <option value="religion">Religion</option>
-            <option value="romance">Romance</option>
-            <option value="science">Science</option>
-            <option value="sports">Sports</option>
-            <option value="thriller">Thriller</option>
-            <option value="travel">Travel</option>
-            <option value="true crime">True Crime</option>
+            <option value="Arts">Arts</option>
+            <option value="Biographies">Biographies</option>
+            <option value="Business">Business</option>
+            <option value="Comics">Comics</option>
+            <option value="Computers & tech">Computers</option>
+            <option value="Cooking">Cooking</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Fiction">Fiction</option>
+            <option value="History">History</option>
+            <option value="Horror">Horror</option>
+            <option value="Kids">Kids</option>
+            <option value="Music">Music</option>
+            <option value="Mysteries">Mysteries</option>
+            <option value="Non fiction">Non Fiction</option>
+            <option value="Parenting">Parenting</option>
+            <option value="Poetry">Poetry</option>
+            <option value="Religion">Religion</option>
+            <option value="Romance">Romance</option>
+            <option value="Science">Science</option>
+            <option value="Sports">Sports</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Travel">Travel</option>
+            <option value="True crime">True Crime</option>
           </select></p>
           <br>
 
           <center>
           <p style="font-size: 20px; color: white; margin-left: -130px;">Difficulty:&nbsp; 
           <select name="diff" size="1" style="color: black; font-size: 15px">
-            <option value="easy">Easy</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="pro">Pro</option>
+            <option value="Easy">Easy</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Pro">Pro</option>
           </select></p><br>
 
           <input type="text" name="lang" class="form-control" placeholder="Language" required=""><br>
           </center>
 
-          <!--<p style="font-size: 20px; color: white; margin-left: -220px;">Book image:</p>
+          <p style="font-size: 20px; color: white; margin-left: -220px;">Book image:</p>
           <input style="margin-left: 30px; color: white;" id="image" type="file" name="image" value="" required><br>
 
           <p style="font-size: 20px; color: white; margin-left: -220px;">Book PDF File:</p>
           <input style="margin-left: 30px; color: white;" id="pdf" type="file" name="pdf" value="" required><br>
-          
-          <p style="font-size: 12px;color: black;background-color: lightgreen; ">*NOTE: Image and PDF file name should be same as book name.</p>-->
+
+     <!--     <p style="font-size: 20px; color: white; margin-left: -220px;">Mp3 File:</p>
+          <input style="margin-left: 30px; color: white;" id="mp3" type="file" name="mp3" value="" required>  -->
 
           <button style="text-align: center; color: black; width: 80px; height: 40px;" class="btn btn-success" type="submit" name="submit">ADD</button>
           
@@ -263,23 +264,33 @@
         }
         if($count==0)
         {
-          /*$pdf=$_FILES['pdf']['name'];
-          $pdf_type=$_FILES['pdf']['type'];
-          $pdf_size=$_FILES['pdf']['size'];
+          $pdf=$_FILES['pdf']['name'];
           $pdf_tem_loc=$_FILES['pdf']['tmp_name'];
-          $pdf_store="books/pdf_file/".$pdf;
+
+          $ext = pathinfo($pdf, PATHINFO_EXTENSION);
+          $pdf_name = $_POST['bname'].'.'.$ext;
+
+          $pdf_store="books/pdf_file/".$pdf_name;
           move_uploaded_file($pdf_tem_loc,$pdf_store);
 
           $image = $_FILES['image']['name'];
-          $target = "books/image/".basename($image);
-          move_uploaded_file($_FILES['image']['tmp_name'], $target);*/
+          $ext = pathinfo($image, PATHINFO_EXTENSION);
+          $image_name = $_POST['bname'].'.'.$ext;
+          $target = "books/image/".basename($image_name);
+          move_uploaded_file($_FILES['image']['tmp_name'], $target);
 
-          mysqli_query($db,"INSERT INTO `books` (bid, author, bname, nop, genre, diff, lang, image, pdf) VALUES ('$_POST[bid]', '$_POST[author]', '$_POST[bname]', '$_POST[nop]', '$_POST[genre]', '$_POST[diff]', '$_POST[lang]', 'books/image/$_POST[bname].jpg', 'books/pdf_file/$_POST[bname].pdf') ;");
+          /*$mp3 = $_FILES['mp3']['name'];
+          $ext1 = pathinfo($mp3, PATHINFO_EXTENSION);
+          $mp3_name = $_POST['bname'].'.'.$ext1;
+          $tar = "books/mp3/".basename($mp3_name);
+          move_uploaded_file($_FILES['mp3']['tmp_name'], $tar);*/
+
+          mysqli_query($db,"INSERT INTO `books` (bid, author, bname, nop, genre, diff, lang, image, pdf) VALUES ('$_POST[bid]', '$_POST[author]', '$_POST[bname]', '$_POST[nop]', '$_POST[genre]', '$_POST[diff]', '$_POST[lang]', '$target', '$pdf_store') ;");
 
         ?>
           <script type="text/javascript">
-           alert("Book Added Successfully. Upload to Github books folder");
-	   location.replace("https://github.com/SarathAdhi/Book_recomendation_website/tree/main/books", "_blank");
+           alert("Book Added Successfully.");
+           location.replace("add.php");
           </script>
 
         <?php

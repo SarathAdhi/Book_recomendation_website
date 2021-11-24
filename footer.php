@@ -136,34 +136,39 @@ html::-webkit-scrollbar-thumb{
 
         <div class="box">
             <h3>Genres</h3>
-            <a href="#"> <i class="fas fa-book"></i> Arts </a>
-            <a href="#"> <i class="fas fa-book"></i> Biographies </a>
-            <a href="#"> <i class="fas fa-book"></i> Business </a>
-            <a href="#"> <i class="fas fa-book"></i> Comics </a>
-            <a href="#"> <i class="fas fa-book"></i> Computers & Tech </a>
-            <a href="#"> <i class="fas fa-book"></i> Cooking </a>
-            <a href="#"> <i class="fas fa-book"></i> Entertainment </a>
-            <a href="#"> <i class="fas fa-book"></i> Fantasy </a>
-            <a href="#"> <i class="fas fa-book"></i> Fiction </a>
-            <a href="#"> <i class="fas fa-book"></i> History </a>
-            <a href="#"> <i class="fas fa-book"></i> Horror </a>
-            <a href="#"> <i class="fas fa-book"></i> Kids </a>
+            <?php
+                echo '<a href="genreview.php?id1=arts"> <i class="fas fa-book"></i> Arts </a>' ;
+                echo '<a href="genreview.php?id1=biographies"> <i class="fas fa-book"></i> Biographies </a>' ;          
+                echo '<a href="genreview.php?id1=Business"> <i class="fas fa-book"></i> Business </a>';
+                echo '<a href="genreview.php?id1=Comics"> <i class="fas fa-book"></i> Comics </a>';
+                echo '<a href="genreview.php?id1=Computers"> <i class="fas fa-book"></i> Computers & Tech </a>';
+                echo '<a href="genreview.php?id1=Cooking"> <i class="fas fa-book"></i> Cooking </a>';
+                echo '<a href="genreview.php?id1=Entertainment"> <i class="fas fa-book"></i> Entertainment </a>';
+                echo '<a href="genreview.php?id1=Fantasy"> <i class="fas fa-book"></i> Fantasy </a>';
+                echo '<a href="genreview.php?id1=Fiction"> <i class="fas fa-book"></i> Fiction </a>';
+                echo '<a href="genreview.php?id1=History"> <i class="fas fa-book"></i> History </a>';
+                echo '<a href="genreview.php?id1=Horror"> <i class="fas fa-book"></i> Horror </a>';
+                echo '<a href="genreview.php?id1=Kids"> <i class="fas fa-book"></i> Kids </a>';
+            ?>
+
         </div>
 
         <div class="box">
             <br><br><br>
-            <a href="#"> <i class="fas fa-book"></i> Music </a>
-            <a href="#"> <i class="fas fa-book"></i> Mysteries </a>
-            <a href="#"> <i class="fas fa-book"></i> Non Fiction </a>
-            <a href="#"> <i class="fas fa-book"></i> Parenting </a>
-            <a href="#"> <i class="fas fa-book"></i> Poetry </a>
-            <a href="#"> <i class="fas fa-book"></i> Religion </a>
-            <a href="#"> <i class="fas fa-book"></i> Romance </a>
-            <a href="#"> <i class="fas fa-book"></i> Science </a>
-            <a href="#"> <i class="fas fa-book"></i> Sports </a>
-            <a href="#"> <i class="fas fa-book"></i> Thriller </a>
-            <a href="#"> <i class="fas fa-book"></i> Travel </a>
-            <a href="#"> <i class="fas fa-book"></i> True Crime </a>
+            <?php
+                echo '<a href="genreview.php?id1=Music"> <i class="fas fa-book"></i> Music </a>';
+                echo '<a href="genreview.php?id1=Mysteries"> <i class="fas fa-book"></i> Mysteries </a>';
+                echo '<a href="genreview.php?id1=Non Fiction"> <i class="fas fa-book"></i> Non Fiction </a>';
+                echo '<a href="genreview.php?id1=Parenting"> <i class="fas fa-book"></i> Parenting </a>';
+                echo '<a href="genreview.php?id1=Poetry"> <i class="fas fa-book"></i> Poetry </a>';
+                echo '<a href="genreview.php?id1=Religion"> <i class="fas fa-book"></i> Religion </a>';
+                echo '<a href="genreview.php?id1=Romance"> <i class="fas fa-book"></i> Romance </a>';
+                echo '<a href="genreview.php?id1=Science"> <i class="fas fa-book"></i> Science </a>';
+                echo '<a href="genreview.php?id1=Sports"> <i class="fas fa-book"></i> Sports </a>';
+                echo '<a href="genreview.php?id1=Thriller"> <i class="fas fa-book"></i> Thriller </a>';
+                echo '<a href="genreview.php?id1=Travel"> <i class="fas fa-book"></i> Travel </a>';
+                echo '<a href="genreview.php?id1=True Crime"> <i class="fas fa-book"></i> True Crime </a>';
+            ?>
         </div>
 
         <div class="box">
@@ -179,17 +184,17 @@ html::-webkit-scrollbar-thumb{
             <h3>contact info</h3>
             <a href="#"> <i class="fa">&#xf095;</i> +123-456-7890 </a>
             <a href="#"> <i class="fa">&#xf095;</i> +111-222-3333 </a>
-            <a href="#"> <i class="fas fa-envelope"></i> holdyourbook@gmail.com </a>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=new"> <i class="fas fa-envelope"></i> holdyourbook@gmail.com </a>
         </div>
         
     </div>
 
     <div class="share">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-linkedin"></a>
-        <a href="#" class="fa fa-envelope"></a>
+        <a href="https://www.facebook.com/" class="fab fa-facebook-f" target="_blank"></a>
+        <a href="https://www.twitter.com/" class="fab fa-twitter" target="_blank"></a>
+        <a href="https://www.instagram.com/" class="fab fa-instagram" target="_blank"></a>
+        <a href="https://www.linkedin.com/" class="fab fa-linkedin" target="_blank"></a>
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" class="fa fa-envelope" target="_blank"></a>
     </div>
 
     <div class="credit"> created by <span>HoldUrBook</span> | all rights reserved! </div>

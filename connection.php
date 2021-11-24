@@ -1,7 +1,6 @@
 <?php
 
-	/*$db = mysqli_connect("localhost","root","","genre"); server name, username, password, database name */
-	$db = mysqli_connect("remotemysql.com","rILqN3VfQi","FgGW8KuUEd","rILqN3VfQi");
+	$db = mysqli_connect("localhost","root","","genre"); 	/* server name, username, password, database name */
 ?>
 
 <?php

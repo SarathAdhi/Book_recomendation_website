@@ -33,6 +33,7 @@
             animation-duration: 10s;
             animation-iteration-count: infinite;
             animation-timing-function: ease-in-out;
+            
         }
         @keyframes slider
         {
@@ -76,7 +77,7 @@
         .details
         {
             position: absolute;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Bahnschrift;
             font-size: 20px;
             color: white;
             left: 50%;

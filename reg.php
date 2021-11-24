@@ -150,7 +150,7 @@
       if(isset($_POST['submit']))
       {
         $count=0;
-        $sql="SELECT username from `users`";
+        $sql="SELECT username from `USERS`";
 
         $res=mysqli_query($db,$sql);
 
@@ -164,7 +164,7 @@
         }
         if($count==0)
         {
-          mysqli_query($db,"INSERT INTO `users` VALUES('$_POST[name]', '$_POST[username]', '$_POST[email]', '$_POST[password]', 'user.png');");
+          mysqli_query($db,"INSERT INTO `USERS` VALUES('$_POST[name]', '$_POST[username]', '$_POST[email]', '$_POST[password]', 'user.png');");
         ?>
           <script type="text/javascript">
            alert("Registration successful");

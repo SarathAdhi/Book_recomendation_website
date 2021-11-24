@@ -226,7 +226,7 @@
 
         <div class="icons1">
             <center>
-                <a class="subnavbtn"><img src="profile/user.png"><p style="font-size: 15px;  margin-top: -5px;"><?php echo $_SESSION['username']; ?></p></a>
+                <a class="subnavbtn"><img src="profile/user.png"><p style="font-size: 15px;  margin-top: -3px;"><?php echo $_SESSION['username']; ?></p></a>
 
                 <div class="subnav-content" style="margin-left: -35px; font-size: 5px;">
                     <i class="fas fa-arrow-down"></i>
@@ -234,13 +234,11 @@
                     
                     <a href="logout.php">Logout</a>
                     <p>-------------</p>
-                    <a href="#team">My Profile</a>
+                    <a href="profile.php">My Profile</a>
                     <p>-------------</p>
-                    <a href="#careers">Wishlist</a>
+                    <a href="fav.php">My Favorite</a>
                     <p>-------------</p>
                     <a href="#careers">Feedback</a>
-                    <p>-------------</p>
-                    <a href="#careers">Contact us</a>
                 
                 </div>
             </center>

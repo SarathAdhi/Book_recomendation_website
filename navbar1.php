@@ -1,4 +1,5 @@
 <?php
+include"connection.php";
     session_start();
 ?>
 <!DOCTYPE html>
@@ -13,7 +14,7 @@
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <style type="text/css">
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
@@ -61,7 +62,11 @@
         section{
             padding:5rem 9%;
         }
-
+        .header
+        {
+            position: relative;
+            z-index:1000;
+        }
 
         .btn1:hover{
             background:var(--dark-color);
@@ -73,7 +78,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            
+
         }
 
         .header .header-1 .logo{
@@ -147,19 +152,19 @@
             color:var(--green);
         }
 
+
         #search-btn{
             display: none;
         }
 
         .header .header-2{
             background:var(--green);
-            
 
         }
 
         .header .header-2 .navbar{
             text-align: center;
-            
+
         }
 
         .header .header-2 .navbar a{
@@ -186,6 +191,7 @@
             height: 30px;
         }
 
+
         .subnav-content {
             border-radius: 5px;
             border: solid ;
@@ -193,7 +199,7 @@
           position: absolute;
           background-color: ghostwhite;
           width: 120px;
-          height: 240px;
+          height: 220px;
           z-index: 1;
         }
 
@@ -207,13 +213,28 @@
         .subnav-content a:hover {
 
           text-align: center;
+
           
         }
 
-        .icons1:hover .subnav-content {
-          display: block;
-        }
+        .icons1 :hover .subnav-content {
+          display: inline-block;
+          
 
+        }
+        .header-1 td
+        {
+            text-align: left;
+            justify-items: center;
+        }
+        .active{
+            border-color: white;
+            border-left-color: black; 
+            border-top-color: black;
+            color: white; 
+            background-color: darkgreen;
+        }
+        
     </style>
 </head>
 <body>
@@ -232,13 +253,15 @@
         <form action="" class="search-form">
             <input type="search" name="" placeholder="search here..." id="search-box">
             <label for="search-box" class="fas fa-search"></label>
+
         </form>
 
         <div class="icons1">
             <center>
-                <a class="subnavbtn"><img src="profile/user.png"><p style="font-size: 15px;  margin-top: -9px;"><?php echo $_SESSION['username']; ?></p></a>
 
-                <div class="subnav-content" style="margin-left: -35px; ">
+                <a class="subnavbtn"><img src="profile/user.png"><p style="font-size: 15px;  margin-top: -3px;"><?php echo $_SESSION['username']; ?></p></a><br>
+
+                <div class="subnav-content" style="margin-left: -50px; margin-top: -10px;">
                     <i class="fas fa-arrow-down"></i>
                     <br>
                     
@@ -246,11 +269,10 @@
                     <p>-------------</p>
                     <a href="profile.php">My Profile</a>
                     <p>-------------</p>
-                    <a href="#careers">Wishlist</a>
+                    <a href="fav.php">My Favorite</a>
                     <p>-------------</p>
-                    <a href="#careers">Feedback</a>
-                    <p>-------------</p>
-                    <a href="#careers">Contact us</a>
+                    <a href="feedback.php">Feedback</a>
+
                 
                 </div>
             </center>
@@ -261,7 +283,8 @@
         <nav class="navbar" >
             <a href="index.php">Home</a>
             <a href="genre.php">Genre</a>
-            <a href="books.php">Arrivals</a>
+            <a href="arrivals.php">Arrivals</a>
+            <a href="ai.php">_AI_</a>
             <a href="aboutus.php">About Us</a>
         </nav>
     </div>
@@ -277,15 +300,29 @@
 
                 <a href="index.php" class="logo"> <i class="fas fa-book"></i> H.U.B </a>
 
-                <form action="" class="search-form">
-                    <input type="search" name="" placeholder="search here..." id="search-box">
-                    <label for="search-box" class="fas fa-search"></label>
+                <form action="" class="search-form" method="post">
+                    <input type="search-box" name="str" placeholder="search here..." id="search-box">
+                    <input class="btn btn-success" value="Search" type="submit" name="search"  style="width:70px; font-size: 15px;">
+                    <br><br>
                 </form>
+                <?php
+                    /*if(isset($_POST['search']))
+                    {
+                        $str=mysqli_real_escape_string($db,$_POST['str']);
+                        $sql = "SELECT * FROM `books` WHERE `bname` LIKE '%$str%' or `author` LIKE '%$str%';";
+                        $res = mysqli_query($db, $sql);
+
+
+                        while($row = mysqli_fetch_assoc($res))
+                        {
+                            echo "<td>"; echo $row['bname']; echo "</td><br>";  
+                            
+                        }
+
+                    }*/
+                ?>
 
                 <div class="icons">
-                    <div id="search-btn" class="fas fa-search"></div>
-                    <a href="#" class="fas fa-heart"></a>
-                    
                     <a href="login.php" class="fas fa-user"></a><br>
                 </div>
             </div>

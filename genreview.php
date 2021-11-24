@@ -1,12 +1,11 @@
 <?php
   include "connection.php";
   include "navbar.php";
-
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Books</title>
+	<title>Biographies</title>
 	  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie-edge">
@@ -18,12 +17,13 @@
 <body>
 		<?php
 
-			echo "<a href='genre.php' style='font-size: 15px;'>
-              <span class='glyphicon glyphicon-chevron-left'></span>Back
-            </a>";
-
-			$res=mysqli_query($db,"SELECT * FROM `books` ORDER BY `books`.`bname` ASC;");
+			echo "<button onclick='goBack()' class='btn btn-success'><span class='glyphicon glyphicon-chevron-left'></span>Go Back</button>";
 			?>
+			<script>
+		  function goBack() {
+		    window.history.back();
+		  }
+		</script>
 			<br><br>
 			<?php
 			echo "<table class='table table-bordered table-hover' style= 'font-size: 12px; text-align:center;'>";
@@ -37,32 +37,38 @@
 					echo "<th>"; echo "No.of Page";  echo "</th>";
 					echo "<th>"; echo "Difficulty";  echo "</th>";
 					echo "<th>"; echo "Language";  echo "</th>";
-					echo "<th>"; echo "Add to Favorite";  echo "</th>";
+					echo "<th>"; echo "Review";  echo "</th>";
 				echo "</tr>";	
-
+				
+				      $res=mysqli_query($db,"SELECT * FROM `books` WHERE `genre` = '{$_GET["id1"]}';");
 				while($row=mysqli_fetch_assoc($res))
 				{
 					echo "<tr>";
 					echo "<td>";
 					?>
 
-					<img src="<?php echo $row['image']; ?> " height="50" width="50">
+				<img src="<?php echo $row['image']; ?> " height="90" width="70">
+
 
 					<?php
+
 					echo "</td>";
 					echo "<td>"; echo $row['bname']; echo "</td>";
 					echo "<td>"; echo $row['author']; echo "</td>";
 					echo "<td>"; echo $row['nop']; echo "</td>";
 					echo "<td>"; echo $row['diff']; echo "</td>";
-					echo "<td>"; echo $row['lang']; echo "</td>";
-					echo "<td>"; echo "<form name='login' action='' method='post'><input class='btn btn-success' type='submit' name='submit' value='Add to Favorite' ></form>"; echo "</td>";
+					echo "<td>"; echo $row['lang']; echo "</td>"; 
+					echo "<td>"; 
+					echo '<a href="review.php?id='.$row['bid'].'" class="fa fa-star" style="text-decoration: none; font-size: 20px; color: green;"></a><br>';
+					echo $row['review'];
+					echo "</td>";
+					echo "<td>"; echo '<a href="fav.php?id='.$row['bid'].'" class="fa fa-heart" style="text-decoration: none; font-size: 20px; color: indianred;"></a>'; echo "</td>";
 
 					if(isset($_POST['submit']))
 			    {
+
 			    	?>
-			    	<script type="text/javascript">
-			            alert("The username already exist.");
-			      </script>
+			    	
 			<?php
 			    }
 					echo "</tr>";

@@ -1,7 +1,3 @@
-// inspiration: https://www.valerian.bnpparibas/en
-
-// tilt.js
-
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.

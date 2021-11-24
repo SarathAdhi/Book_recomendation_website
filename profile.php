@@ -7,11 +7,22 @@
  <head>
  	<title>Profile</title>
  	<style type="text/css">
+ 		.container
+ 		{
+ 			height: 722px;
+ 			width: 100%;
+ 		}
  		.wrapper
  		{
  			width: 300px;
  			margin: 0 auto;
  			color: white;
+ 			margin-top: 100px;
+ 			height: 430px;
+ 			width: 400px;
+ 			background: #27ae60;
+ 			color: black;
+ 			border-radius: 20px;
  		}
  		h2
  		{
@@ -25,44 +36,25 @@
  		{
  			font-size: 15px;
  		}
- 		.wrapper
- 		{
- 			margin-top: 100px;
- 			height: 430px;
- 			width: 400px;
- 			background: #27ae60;
- 			color: black;
- 		}
+
  	</style>
  </head>
- <body style="background-color: #161b22; ">
- 	<button class="btn btn-default" style="float: right; width: 70px;" name="submit1">Edit</button>
+ <body style="background-color: #161b22;">
+ 	
  	<div class="container">
  		<form action="" method="post">
- 			
- 		</form>
- 		<div class="wrapper">
- 			<br>
+ 			<div class="wrapper">
  			<?php
-
- 				if(isset($_POST['submit1']))
- 				{
- 					?>
- 						<script type="text/javascript">
- 							window.location="edit.php"
- 						</script>
- 					<?php
- 				}
  				$q=mysqli_query($db,"SELECT * FROM users where username='$_SESSION[username]' ;");
  			?>
  			<h2 style="text-align: center;">My Profile</h2>
- 			<br><br>
+ 			<br>
 
  			<?php
  				$row=mysqli_fetch_assoc($q);
 
  				echo "<div style='text-align: center'>
- 					<img class='img-circle profile-img' height=110 width=120 src='".$row['pimg']."'>
+ 					<img style='radius: 10px;' height=110 width=120 src='".$row['pimg']."' >
  				</div>";
  			?>
  			<div style="text-align: center;"> 
@@ -74,7 +66,7 @@
  			<center>
  			<?php
  				echo "<b>";
- 				echo "<table class='table table-bordered'>";
+ 				echo "<table>";
 	 				echo "<tr>";
 	 					echo "<td>";
 	 						echo "<b> Name: &emsp;</b>";
@@ -115,8 +107,24 @@
  				echo "</table>";
  				echo "</b>";
  			?>
+ 			<br>
+ 			<button class="btn btn-default" style=" width: 70px;" name="submit1">Edit</button>
  			</center>
+ 		</form>
+ 		<?php
+
+ 			if(isset($_POST['submit1']))
+ 			{
+ 		?>
+ 		<script type="text/javascript">
+ 			window.location="edit.php"
+ 		</script>
+ 		<?php
+ 			}
+ 		?>
+ 			
  		</div>
  	</div>
+
  </body>
  </html>

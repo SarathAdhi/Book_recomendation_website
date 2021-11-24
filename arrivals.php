@@ -107,15 +107,15 @@
         $sql = "SELECT DISTINCT `genre` FROM `books` ORDER BY `books`.`genre` ASC";
         $res=mysqli_query($db,$sql);
         
-
-        while($row=mysqli_fetch_assoc($res))
+        $i = 0;
+        while($row=mysqli_fetch_assoc($res) )
         {
           echo "<p style='font-size: 30px; font-weight: bold;'>",$row['genre'],"</p>";
 
           $sql2="SELECT `image`, `pdf` FROM `books` WHERE  `genre` = '$row[genre]'";
           $res2=mysqli_query($db,$sql2);
 
-        while($row2=mysqli_fetch_assoc($res2))
+        while($row2=mysqli_fetch_assoc($res2) AND $i < 5)
             {
       ?>
         <div class="card">
@@ -128,7 +128,9 @@
         </div>
         &emsp; &emsp; 
       <?php
+        $i = $i + 1;
         }
+        $i=0;
         }
       ?>
     </center>

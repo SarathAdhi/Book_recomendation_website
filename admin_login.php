@@ -168,9 +168,9 @@
 			}
 			else
 			{
-				$info = mysqli_query($db,"SELECT * FROM users WHERE email = '$_POST[email]';");
-               			$row=mysqli_fetch_assoc($info);
-                		$_SESSION['username'] = $row['username'];
+                $info = mysqli_query($db,"SELECT * FROM users WHERE email = '$_POST[email]';");
+                $row=mysqli_fetch_assoc($info);
+                $_SESSION['username'] = $row['username'];
 				?>
 					<script type="text/javascript">
                         alert("Login Successful.");

@@ -1,10 +1,15 @@
+<?php
+  include "navbar1.php";
+?>
 <!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>About me</title>
+  <title>About us</title>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Exo+2:400,500,700,900'>
-  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style type="text/css">
 
   html, body {
@@ -21,7 +26,7 @@ body {
   background-size: cover;
   display: table-cell;
   vertical-align: middle;
-  font-family: "Exo 2", sans-serif;
+
   background-color: #312e4a;
   color: #d8d8d8;
 }
@@ -38,7 +43,7 @@ body:before {
 
 h1, h3, p {
   margin: 0;
-  text-transform: uppercase;
+
 }
 
 h1 {
@@ -60,10 +65,12 @@ p {
 }
 
 .wrapper {
+  height: 747px;
   position: relative;
   max-width: 1170px;
   margin: 0 auto;
   padding: 80px 20px;
+    text-transform: uppercase;
 }
 
 .roll-up {
@@ -153,7 +160,14 @@ p {
   transform: translateX(100%);
   transition-delay: inherit;
 }
-
+.roll-up span
+{
+  font-size: 25px;
+}
+.text-reveal span
+{
+  font-size: 13px;
+}
 .card {
   display: inline-flex;
   align-items: center;
@@ -161,7 +175,7 @@ p {
   position: relative;
   max-width: 370px;
   width: 240px;
-  height: 450px;
+  height: 415px;
   padding: 20px;
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
   background-size: cover;
@@ -200,17 +214,19 @@ p {
 </style>
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="wrapper">
-  <button onclick="goBack()"><span class="glyphicon glyphicon-chevron-left"></span>Go Back</button>
-  <script>
-  function goBack() {
-    window.history.back();
-  }
+    <script>                                
+    $(document).ready(function() 
+    {
+      $("html, body").animate({
+        scrollTop: $('html, body').get(0).scrollHeight
+      }, 0.8);
+    });
+
   </script>
 
+<div class="wrapper">
   <h1>About Us..</h1>
-  
+  <center>
   <div class="card" style="background-image: url(about_us/sara1.jpg)">
     <div class="card__content" >
       <div class="card__content--description">
@@ -289,6 +305,7 @@ p {
         </p>
       </div>
     </div>
+    </center>
   </div>
 
 </div>
