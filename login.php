@@ -159,7 +159,7 @@
 		if(isset($_POST['submit']))
 		{
 			$count = 0;
-			$result = mysqli_query($db,"SELECT * FROM `USERS` WHERE email = '$_POST[email]' AND password = '$_POST[password]';");
+			$result = mysqli_query($db,"SELECT * FROM `users` WHERE email = '$_POST[email]' AND password = '$_POST[password]';");
 			$count = mysqli_num_rows($result);
             
 
