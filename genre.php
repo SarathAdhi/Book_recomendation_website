@@ -31,6 +31,7 @@ height: auto;
 
     display: inline-block;
      width: 300px;
+     height: 600px;
      box-shadow: 2px 2px 20px black;
      border-radius: 7px; 
      margin: 2%;
