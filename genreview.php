@@ -12,13 +12,25 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
-<section>
-<body>
-		<?php
 
-			echo "<button onclick='goBack()' class='btn btn-success'><span class='glyphicon glyphicon-chevron-left'></span>Go Back</button>";
-			?>
+  <style type="text/css">
+  	.container
+  	{
+  		width: 100%;
+  		height: 100%;
+  		position: relative;
+  		justify-content: center;
+  		text-align: center;
+  	}
+
+  </style>
+
+</head>
+<body>
+	<button onclick='goBack()' class='btn btn-success' ><span class='glyphicon glyphicon-chevron-left'></span>Go Back</button>
+	<div class="container">
+		
+
 			<script>
 		  function goBack() {
 		    window.history.back();
@@ -35,8 +47,6 @@
 					echo "<th>"; echo "Book";  echo "</th>";
 					echo "<th>"; echo "Author", "&emsp;";  echo "</th>";
 					echo "<th>"; echo "No.of Page";  echo "</th>";
-					echo "<th>"; echo "Difficulty";  echo "</th>";
-					echo "<th>"; echo "Language";  echo "</th>";
 					echo "<th>"; echo "Review";  echo "</th>";
 				echo "</tr>";	
 				
@@ -57,7 +67,6 @@
 					echo "<td>"; echo $row['author']; echo "</td>";
 					echo "<td>"; echo $row['nop']; echo "</td>";
 					echo "<td>"; echo $row['diff']; echo "</td>";
-					echo "<td>"; echo $row['lang']; echo "</td>"; 
 					echo "<td>"; 
 					echo '<a href="review.php?id='.$row['bid'].'" class="fa fa-star" style="text-decoration: none; font-size: 20px; color: green;"></a><br>';
 					echo $row['review'];
@@ -77,6 +86,6 @@
 			echo "</table>";
 
 		?>
-</section>
+</div>
 </body>
 </html>
