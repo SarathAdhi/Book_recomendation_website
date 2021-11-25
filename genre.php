@@ -22,7 +22,8 @@ body{
  font-family: arial;
 }
 .main{
-
+width: 100%;
+height: 100%;
 justify-content: center;
 align-items: center;
 margin: 2%;
@@ -30,7 +31,7 @@ margin: 2%;
 
 .card{
     position: relative;
-    display: inline-table;
+    display: inline-block;
      width: 20%;
      box-shadow: 2px 2px 20px black;
      border-radius: 7px; 
