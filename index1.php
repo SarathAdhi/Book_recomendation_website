@@ -98,12 +98,14 @@
         }
         .update
         {
-            background: black;
-            margin-top: -20px;
-            position: relative;
-            justify-content: center;
-            text-align: center;
-            color: white;
+            height: 30px;
+            width: 370px;
+            background: white;
+            position: fixed;
+            color: black;
+            top: 99%;
+            left: 50%;
+            transform: translate(-50%,-50%);
         }
 
             
@@ -121,7 +123,7 @@
         </div>
     </div>
     <div class="update">
-        <h2>*New stable update for mobile users*&emsp;*More responsive than before*&emsp;*Database bugs resolved*</h2>
+        <h2>*New stable update for mobile users, Bug fixed*</h2>
     </div>
 </div>
 
