@@ -120,11 +120,10 @@
             </div>
         </div>
     </div>
+    <div class="update">
+        <h2>*New stable update for mobile users*&emsp;*More responsive than before*&emsp;*Database bugs resolved*</h2>
+    </div>
 </div>
-<div class="update">
-    <h2>*New stable update for mobile users*&emsp;*More responsive than before*&emsp;*Database bugs resolved*</h2>
-</div>
-
 
     <?php
         include "footer.php";
