@@ -1,14 +1,14 @@
 <?php
-	include "connection.php";
-	include "navbar.php";
-	?>
+  include "connection.php";
+  include "navbar.php";
+  ?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+body {width: 100%; height: 100%; font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
@@ -19,27 +19,26 @@ body {font-family: Arial, Helvetica, sans-serif;}
   width: 100px;
   border: none;
   cursor: pointer;
-  position: fixed;
-  margin-left: -45px;
+  position: relative;
+
   font-size: 15px;
 }
 
 /* The popup form - hidden by default */
 .form-popup {
-
+  width: 300px;
   display: none;
-  position: fixed;
+  position: relative;
   border: 3px solid #f1f1f1;
   justify-content: center;
-  right: 40%;
-  left: 40%;
-  margin-top: -10px;
+  margin-top: -80px;
+  background-color: white;
 
 }
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 300px;
+  width: 100%;
   padding: 10px;
   background-color: white;
   text-align: center;
@@ -70,38 +69,36 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </style>
 </head>
 <body>
-	<br><br>
+  <br><br>
 <center>
-  	<?php 
-  		$sql = "SELECT * FROM `books` WHERE `bid` = '{$_GET["id"]}'";
-  		$res = mysqli_query($db,$sql);
-  		$row1 = mysqli_fetch_assoc($res);
-  		?>
-  		<h2>Average Review: 
-  		<?php
-  			echo $row1['review'];
-  		?>
-  		</h2><br><br>
+    <?php 
+      $sql = "SELECT * FROM `books` WHERE `bid` = '{$_GET["id"]}'";
+      $res = mysqli_query($db,$sql);
+      $row1 = mysqli_fetch_assoc($res);
+      ?>
+      <h2>Average Review: 
+      <?php
+        echo $row1['review'];
+      ?>
+      </h2><br><br>
 
-  		<img src="<?php echo $row1['image']; ?>" width="150px" height="200px"> <br><br>
-  		<h1>Book: 
-  		<?php
-  		echo $row1['bname'];
-  		?>
-  		</h1>
-  		<h2>Author: 
-  		<?php
-  		echo $row1['author'];
-  	?></h2>
-  	<br><br>
+      <img src="<?php echo $row1['image']; ?>" width="150px" height="200px"> <br><br>
+      <h1>Book: 
+      <?php
+      echo $row1['bname'];
+      ?>
+      </h1>
+      <h2>Author: 
+      <?php
+      echo $row1['author'];
+    ?></h2>
+    <br><br>
 
 <button class="open-button" onclick="openForm()">Open Form</button>
 
 <div class="form-popup" id="myForm">
   <form action=""  method="post">
-  	<div class="form-container">
-  		  	
-  	<h3><?php echo $row1['bname']; ?></h3>
+    <div class="form-container">
     <p style="font-size: 20px; color: black;">Select Your Review:&nbsp; 
           <select name="review" size="1" style="color: black; font-size: 15px">
             <option value="1">1</option>
@@ -118,36 +115,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <br><br>
     <input class="btn btn-success" type="submit" name="submit" value="Submit">
 
-    <?php
-
-if(isset($_POST['submit']))
-{
-	$sql1 = "SELECT * FROM `books` WHERE `bid` = '{$_GET["id"]}';";
-	$res1 = mysqli_query($db,$sql1);
-	while($row=mysqli_fetch_assoc($res1))
-	{
-		$rev = $row['review'];
-
-	if($rev != 0)
-	{
-		$sum = $rev + $_POST['review'];
-		$avg = $sum/2;
-	}
-	else
-	{
-		$avg = $_POST['review'];
-	}
-	$sql2 = "UPDATE `books` SET `review`='$avg' WHERE `bid` = '{$_GET["id"]}';";
-	$res2 = mysqli_query($db,$sql2);
-
-}
-?>
-		<script>
-		    window.history.go(-2);
-		</script>
-<?php
-}
-?>
+    
 
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
 
@@ -167,4 +135,33 @@ function closeForm() {
 
 </body>
 </html>
+<?php
 
+if(isset($_POST['submit']))
+{
+  $sql1 = "SELECT * FROM `books` WHERE `bid` = '{$_GET["id"]}';";
+  $res1 = mysqli_query($db,$sql1);
+  while($row=mysqli_fetch_assoc($res1))
+  {
+    $rev = $row['review'];
+
+  if($rev != 0)
+  {
+    $sum = $rev + $_POST['review'];
+    $avg = $sum/2;
+  }
+  else
+  {
+    $avg = $_POST['review'];
+  }
+  $sql2 = "UPDATE `books` SET `review`='$avg' WHERE `bid` = '{$_GET["id"]}';";
+  $res2 = mysqli_query($db,$sql2);
+
+}
+?>
+    <script>
+        window.history.go(-2);
+    </script>
+<?php
+}
+?>
