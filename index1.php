@@ -96,6 +96,15 @@
             width: 100%;
             background-color: grey;
         }
+        .update
+        {
+            background: black;
+            margin-top: -20px;
+            position: relative;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
 
             
     </style>
@@ -112,7 +121,9 @@
         </div>
     </div>
 </div>
-
+<div class="update">
+    <h2>*New stable update for mobile users*&emsp;*More responsive than before*&emsp;*Database bugs resolved*</h2>
+</div>
 
 
     <?php
