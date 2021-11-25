@@ -22,16 +22,16 @@ body{
  font-family: arial;
 }
 .main{
-width: 100%;
-height: auto;
 
+justify-content: center;
+align-items: center;
+margin: 2%;
 }
 
 .card{
-
-    display: inline-block;
-     width: 300px;
-     height: 600px;
+    position: relative;
+    display: inline-table;
+     width: 20%;
      box-shadow: 2px 2px 20px black;
      border-radius: 7px; 
      margin: 2%;
@@ -78,7 +78,7 @@ button:hover{
 
 </style>
 <body>
-
+<div class="main">
 <?php
    $sql = "SELECT * FROM `genre`;";
    $res = mysqli_query($db,$sql);
@@ -86,7 +86,7 @@ button:hover{
    while($row=mysqli_fetch_assoc($res))
    {
     ?>
-     <div class="main">
+       <!--cards -->
 
       <div class="card">
 
@@ -102,11 +102,11 @@ button:hover{
    </div>
 <!--cards -->
 </div>
-</div>
+
 <?php
 
 }
 ?>
-
+</div>
 </body>
 </html>
