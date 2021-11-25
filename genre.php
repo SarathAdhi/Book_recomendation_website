@@ -14,31 +14,28 @@
 <style type="text/css">
 
 
-*{
- margin: 0px;
- padding: 0px;
-}
 body{
  font-family: arial;
 }
-.main{
-
-justify-content: center;
-align-items: center;
-margin: 2%;
+.container{
+  width:  100%;
+  height: 100%;
+  position: relative;
+  justify-content: center;
+  text-align: center;
 }
 
 .card{
-    position: relative;
-    display: inline-table;
-     width: 20%;
+
+    display: inline-block;
+     width: 235px;
      box-shadow: 2px 2px 20px black;
      border-radius: 7px; 
      margin: 2%;
     }
 
 .image img{
-  width: 50%;
+  width: 117.5px;
   height: 200px;
   border-radius: 7px; 
  }
@@ -78,7 +75,7 @@ button:hover{
 
 </style>
 <body>
-<div class="main">
+<div class="container">
 <?php
    $sql = "SELECT * FROM `genre`;";
    $res = mysqli_query($db,$sql);
