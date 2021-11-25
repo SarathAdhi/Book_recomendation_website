@@ -30,9 +30,9 @@ margin: 2%;
 }
 
 .card{
-    position: relative;
+
     display: inline-block;
-     width: 20%;
+     width: 300px;
      box-shadow: 2px 2px 20px black;
      border-radius: 7px; 
      margin: 2%;
