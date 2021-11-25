@@ -79,7 +79,7 @@ button:hover{
 
 </style>
 <body>
-<div class="main">
+
 <?php
    $sql = "SELECT * FROM `genre`;";
    $res = mysqli_query($db,$sql);
@@ -87,7 +87,7 @@ button:hover{
    while($row=mysqli_fetch_assoc($res))
    {
     ?>
-       <!--cards -->
+     <div class="main">
 
       <div class="card">
 
@@ -103,11 +103,11 @@ button:hover{
    </div>
 <!--cards -->
 </div>
-
+</div>
 <?php
 
 }
 ?>
-</div>
+
 </body>
 </html>
