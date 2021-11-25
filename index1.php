@@ -110,7 +110,6 @@
                             <h1>Welcome <?php echo $_SESSION['username'] ?></h1>
             </div>
         </div>
-            session_start();
     </div>
 </div>
 
