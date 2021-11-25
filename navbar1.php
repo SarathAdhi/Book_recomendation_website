@@ -250,11 +250,11 @@ include"connection.php";
 
         <a href="index1.php" class="logo"> <i class="fas fa-book"></i> H.U.B </a>
 
-        <form action="" class="search-form">
+        <!--<form action="" class="search-form">
             <input type="search" name="" placeholder="search here..." id="search-box">
             <label for="search-box" class="fas fa-search"></label>
 
-        </form>
+        </form>-->
 
         <div class="icons1">
             <center>
@@ -300,11 +300,11 @@ include"connection.php";
 
                 <a href="index.php" class="logo"> <i class="fas fa-book"></i> H.U.B </a>
 
-                <form action="" class="search-form" method="post">
+                <!--<form action="" class="search-form" method="post">
                     <input type="search-box" name="str" placeholder="search here..." id="search-box">
                     <input class="btn btn-success" value="Search" type="submit" name="search"  style="width:70px; font-size: 15px;">
                     <br><br>
-                </form>
+                </form>-->
                 <?php
                     /*if(isset($_POST['search']))
                     {

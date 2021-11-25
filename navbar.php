@@ -219,10 +219,10 @@
 
         <a href="index1.php" class="logo"> <i class="fas fa-book"></i> H.U.B </a>
 
-        <form action="" class="search-form">
+        <!--<form action="" class="search-form">
             <input type="search" name="" placeholder="search here..." id="search-box">
             <label for="search-box" class="fas fa-search"></label>
-        </form>
+        </form>-->
 
         <div class="icons1">
             <center>
@@ -261,10 +261,10 @@
 
                 <a href="index.php" class="logo"> <i class="fas fa-book"></i> H.U.B </a>
 
-                <form action="" class="search-form">
+                <!--<form action="" class="search-form">
                     <input type="search" name="" placeholder="search here..." id="search-box">
                     <label for="search-box" class="fas fa-search"></label>
-                </form>
+                </form>-->
 
                 <div class="icons">
                     <div id="search-btn" class="fas fa-search"></div>
