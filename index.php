@@ -76,7 +76,7 @@
         .details
         {
             background-color: black;
-            opacity: .6;
+            background: rgba(0, 0, 0, 0.5);
             position: absolute;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 20px;
@@ -84,6 +84,7 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%,-50%);
+            width: 100%;
         }
         .details h2
         {
@@ -97,9 +98,19 @@
             width: 100%;
             background-color: grey;
         }
+        .update
+        {
+            background: black;
+            margin-top: -20px;
+            position: relative;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
 
             
     </style>
+
   
 </head>
 <body>
@@ -110,12 +121,17 @@
             <div class="details">
 
                             <h1 style="text-align: center; color: white;">WELCOME</h1>
-                            <h2>FinD yOUr PerFect B00k</h1>
+                            
+                            <h2>FinD yOUr PerFect B00k</h2>
             </div>
+            
         </div>
     </div>
 </div>
 
+<div class="update">
+    <h2>*New stable update for mobile users*&emsp;*More responsive than before*&emsp;*Database bugs resolved*</h2>
+</div>
 
 
     <?php
