@@ -98,22 +98,23 @@
             text-align: center;
         }
 
-		.details
-		{
+        .details
+        {
+            min-height: 480px;
+            height: auto;
+            max-width: 430px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            margin: -30px auto;      /*Aligning in centre*/
 
-		    height: 480px;
-		    width: 430px;
-		    background-color: black;
-		    margin: -30px auto;      /*Aligning in centre*/
-		    opacity: .6;
-		    color: white;
-		}
+            color: white;
+        }
         .login .form-control
         {
 
             height: 35px;
-            width: 340px;
-            
+            max-width: 340px;
+            width: 100%;
         }
   </style> 
 </head>

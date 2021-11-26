@@ -76,6 +76,7 @@
         }
         .container
         {
+            padding-right: 10px;
             position: absolute;
             width: 100%;
             height: 100%;
@@ -99,20 +100,19 @@
 
         .details
         {
-
-            height: 560px;
-            width: 450px;
-            background-color: black;
+            min-height: 570px;
+            height: auto;
+            max-width: 430px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
             margin: -30px auto;      /*Aligning in centre*/
-            opacity: .6;
             color: white;
         }
         .login .form-control
         {
-
             height: 35px;
-            width: 350px;
-            
+            max-width: 340px;
+            width: 100%;
         }
   </style>   
 </head>
