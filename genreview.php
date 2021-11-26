@@ -46,7 +46,6 @@
 					echo "<th>"; echo "Image";	echo "</th>";
 					echo "<th>"; echo "Book";  echo "</th>";
 					echo "<th>"; echo "Author", "&emsp;";  echo "</th>";
-					echo "<th>"; echo "No.of Page";  echo "</th>";
 					echo "<th>"; echo "Review";  echo "</th>";
 				echo "</tr>";	
 				
@@ -65,8 +64,6 @@
 					echo "</td>";
 					echo "<td>"; echo $row['bname']; echo "</td>";
 					echo "<td>"; echo $row['author']; echo "</td>";
-					echo "<td>"; echo $row['nop']; echo "</td>";
-					echo "<td>"; echo $row['diff']; echo "</td>";
 					echo "<td>"; 
 					echo '<a href="review.php?id='.$row['bid'].'" class="fa fa-star" style="text-decoration: none; font-size: 20px; color: green;"></a><br>';
 					echo $row['review'];
