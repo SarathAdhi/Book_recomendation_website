@@ -30,7 +30,7 @@
   <style type="text/css">
         .slider
         {
-        	margin-top: -20px;
+            margin-top: -20px;
             position: absolute;
             width: 100%;
             height: 722px;
@@ -75,6 +75,7 @@
         }
         .container
         {
+
             position: absolute;
             width: 100%;
             height: 722px;
@@ -96,22 +97,23 @@
             text-align: center;
         }
 
-		.details
-		{
-
-		    height: 460px;
-		    width: 450px;
-		    background-color: black;
-		    margin: -30px auto;      /*Aligning in centre*/
-		    opacity: .6;
-		    color: white;
-		}
-		.login .form-control
+        .details
+        {
+            min-height: 480px;
+            height: auto;
+            max-width: 430px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            margin: -30px auto;      /*Aligning in centre*/
+            border-radius: 10px;
+            color: white;
+        }
+        .login .form-control
         {
 
             height: 35px;
-            width: 350px;
-            
+            max-width: 340px;
+            width: 100%;
         }
   </style> 
 </head>
