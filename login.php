@@ -106,7 +106,7 @@
             width: 100%;
             background: rgba(0, 0, 0, 0.5);
             margin: -30px auto;      /*Aligning in centre*/
-
+            border-radius: 10px;
             color: white;
         }
         .login .form-control
