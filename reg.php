@@ -100,6 +100,7 @@
 
         .details
         {
+            border-radius: 10px;
             min-height: 570px;
             height: auto;
             max-width: 430px;
