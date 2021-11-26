@@ -28,7 +28,6 @@
   </script>
   
   <style type="text/css">
-     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
         .slider
         {
             margin-top: -20px;
@@ -85,7 +84,7 @@
         .details
         {
             position: absolute;
-            font-family: AlphaCentauri;
+            font-family: Arial, Helvetica, sans-serif;
             font-size: 20px;
             color: white;
             left: 50%;
