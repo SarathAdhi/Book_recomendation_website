@@ -84,7 +84,7 @@
         .details
         {
             position: absolute;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: AlphaCentauri;
             font-size: 20px;
             color: white;
             left: 50%;
